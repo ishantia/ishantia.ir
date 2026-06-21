@@ -45,6 +45,6 @@
   "name": "FlexDNS",
     "description": "A simple DNS changer for linux.",
     "link": "https://github.com/ishantia/FlexDNS",
-    "tags": ["DNS", "Server", "FlexDNS"]
+    "tags": ["DNS", "Linux", "FlexDNS"]
    }
 ]
