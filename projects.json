@@ -34,5 +34,17 @@
     "description": "PakatPlast is an Iranian manufacturer of custom-printed, 100% waterproof plastic folders and envelopes for medical, promotional, and document storage uses.",
     "link": "https://pakatplast.com",
     "tags": ["Website", "Company", "Pakatplast"]
+   },
+  {
+  "name": "Faoxima Telgram bot",
+    "description": "A Telegram bot for selling vpn services.",
+    "link": "https://github.com/ishantia/Faoxima",
+    "tags": ["Telegram", "Bot", "Faoxima"]
+   },
+  {
+  "name": "FlexDNS",
+    "description": "A simple DNS changer for linux.",
+    "link": "https://github.com/ishantia/FlexDNS",
+    "tags": ["DNS", "Server", "FlexDNS"]
    }
 ]
