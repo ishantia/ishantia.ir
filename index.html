@@ -1207,6 +1207,17 @@
             .projects-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
+
+            .project-link {
+                margin: 18px 0 -10px;
+                padding: 10px 0;
+            }
+
+            .contact-item a {
+                display: inline-block;
+                margin: -10px 0;
+                padding: 10px 0;
+            }
         }
 
         @media (max-width: 680px) {
@@ -1218,7 +1229,7 @@
                 top: 10px;
             }
 
-            .brand span {
+            .brand span:not(.brand-mark) {
                 display: none;
             }
 
@@ -1685,6 +1696,7 @@
         });
 
         const parallaxElements = document.querySelectorAll("[data-parallax]");
+        const stackedLayoutQuery = window.matchMedia("(max-width: 980px)");
         let ticking = false;
         function onScroll() {
             if (ticking) return;
@@ -1693,7 +1705,9 @@
                 const y = window.scrollY;
                 document.documentElement.style.setProperty("--parallax-y", `${y * 0.04}px`);
                 parallaxElements.forEach(element => {
-                    if (!prefersReducedMotion) {
+                    if (prefersReducedMotion || stackedLayoutQuery.matches) {
+                        element.style.transform = "";
+                    } else {
                         element.style.transform = `translate3d(0, ${y * Number(element.dataset.parallax)}px, 0)`;
                     }
                 });
@@ -1702,6 +1716,7 @@
             });
         }
         window.addEventListener("scroll", onScroll, { passive: true });
+        stackedLayoutQuery.addEventListener("change", onScroll);
         onScroll();
 
         backToTop.addEventListener("click", () => {
