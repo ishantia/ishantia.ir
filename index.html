@@ -520,8 +520,11 @@
         .hero-visual {
             position: relative;
             min-height: 570px;
-            display: grid;
-            place-items: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
             perspective: 1200px;
         }
 
@@ -611,9 +614,6 @@
         .signal.four { right: 24px; bottom: 22px; }
 
         .terminal {
-            position: absolute;
-            right: 0;
-            bottom: 0;
             width: min(92vw, 360px);
             border: 1px solid var(--line);
             border-radius: var(--radius-lg);
@@ -1267,8 +1267,6 @@
             }
 
             .terminal {
-                position: relative;
-                margin-top: -44px;
                 width: 100%;
             }
 
@@ -1435,8 +1433,8 @@
                             <div class="skill-bar"><div class="skill-progress" data-width="15%"></div></div>
                         </article>
                         <article class="skill-card reveal">
-                            <div class="skill-top"><span>Git, GitHub</span><span class="skill-value">60%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" data-width="60%"></div></div>
+                            <div class="skill-top"><span>Git, GitHub</span><span class="skill-value">90%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
                         </article>
                         <article class="skill-card reveal">
                             <div class="skill-top"><span>Java</span><span class="skill-value">85%</span></div>
